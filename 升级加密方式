@@ -1,0 +1,36 @@
+1. 升级 shadowsock 到 3.0.0，以支持最新的加密方法：
+pip install --upgrade pip
+sudo pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U
+
+- aes-256-gcm: 高速且安全，推荐使用。
+- aes-128-gcm: 较轻量，适合对速度有要求的用户。
+- chacha20-ietf-poly1305: 在手机设备上表现良好。
+
+2. chrome浏览器SwitchyOmega扩展
+https://wiki.dreamrunner.org/public_html/Misc/MiscNotes/shadowsocks%E8%B6%85%E8%AF%A6%E7%BB%86%E7%A7%91%E6%99%AE%E6%95%99%E7%A8%8B.html
+
+如何添加shadowsocks的代理设置？
+
+- 添加shadowsocks的浏览器全局模式
+
+右键SwitchyOmega扩展图标
+选项>>
+新建情景模式>>
+名称：shadowsocks 全局(名称随便填)>>
+类型：选择：代理服务器>>
+点击：创建>>
+代理协议：一定选择SOCKS5 ，代理服务器 填写127.0.0.1 ，代理端口填写 1080
+
+2. 添加shadowsocks的浏览器pac模式
+
+新建情景模式>>
+名称：shadowsocks pac(名称随便填)>>
+类型：选择：pac情景模式>>
+点击：创建>>
+pac网址>>复制下面这个链接到pac网址一栏
+https://raw.githubusercontent.com/KyonLi/ss-pac/master/ss.pac
+点击：立即更新情景模式
+shadowsocks官方有2种pac模式，用哪个或都添加这个随你便
+fast mode pac（快速）和precise mode pac（精确）
+
+3.添加shadowsocks的"自动切换"代理模式
